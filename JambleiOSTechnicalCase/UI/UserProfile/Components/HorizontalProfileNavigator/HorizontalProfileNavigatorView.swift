@@ -44,7 +44,9 @@ struct HorizontalProfileNavigatorView: View {
                         .foregroundStyle(isSelected ? .black : .fadingGray)
                         .frame(maxWidth: .infinity)
                         .frame(height: isSelected ? 3 : 2)
+                        .offset(CGSize(width: 0, height: isSelected ? 0 : 1))
                 }
+                .contentShape(Rectangle())
                 .onTapGesture {
                     selection = 0
                 }
@@ -68,7 +70,9 @@ struct HorizontalProfileNavigatorView: View {
                         .foregroundStyle(isSelected ? .black : Color("FadingGray"))
                         .frame(maxWidth: .infinity)
                         .frame(height: isSelected ? 3 : 2)
+                        .offset(CGSize(width: 0, height: isSelected ? 0 : 1))
                 }
+                .contentShape(Rectangle())
                 .onTapGesture {
                     selection = 1
                 }
@@ -92,7 +96,9 @@ struct HorizontalProfileNavigatorView: View {
                         .foregroundStyle(isSelected ? .black : Color("FadingGray"))
                         .frame(maxWidth: .infinity)
                         .frame(height: isSelected ? 3 : 2)
+                        .offset(CGSize(width: 0, height: isSelected ? 0 : 1))
                 }
+                .contentShape(Rectangle())
                 .onTapGesture {
                     selection = 2
                 }

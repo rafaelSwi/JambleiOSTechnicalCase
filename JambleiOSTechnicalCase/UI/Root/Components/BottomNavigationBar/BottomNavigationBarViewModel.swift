@@ -10,7 +10,7 @@ import CoreFoundation
 
 final class BottomNavigationBarViewModel: ObservableObject {
     
-    let defaultIconSize: CGFloat = 26
-    let defaultFontSize: CGFloat = 12
+    let defaultIconSize: CGFloat = 24
+    let defaultFontSize: CGFloat = 10
     
 }

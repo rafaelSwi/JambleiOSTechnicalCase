@@ -32,7 +32,7 @@ struct UserProfileView: View {
             Spacer()
                 .frame(height: 25)
             
-            VStack {
+            VStack(spacing: 0) {
                 HorizontalProfileNavigatorView(selectionIndex: $vm.selection)
 
                 TabView(selection: $vm.selection) {
@@ -65,6 +65,7 @@ struct UserProfileView: View {
             Spacer()
             
         }
+        .ignoresSafeArea(edges: .bottom)
 
     }
 }

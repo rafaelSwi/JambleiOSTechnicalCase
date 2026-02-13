@@ -83,6 +83,7 @@ struct UserLivesView: View {
                     .font(.callout)
                     .foregroundStyle(.gray)
                     .padding(.top, 10)
+                    .padding(.bottom, 35)
                     .onTapGesture {
                         vm.refreshAction()
                     }

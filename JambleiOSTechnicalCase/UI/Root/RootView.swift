@@ -18,23 +18,31 @@ struct RootView: View {
     var body: some View {
         VStack(spacing: 0) {
             
-            Group {
-                if vm.tab == 0 {
-                    Text("(live screen)")
-                } else if vm.tab == 1 {
-                    Text("(rewards screen)")
-                } else if vm.tab == 2 {
-                    Text("(activities screen)")
-                } else if vm.tab == 3 {
-                    UserProfileView()
+            ZStack {
+                
+                Group {
+                    if vm.tab == 0 {
+                        Text("(live screen)")
+                    } else if vm.tab == 1 {
+                        Text("(rewards screen)")
+                    } else if vm.tab == 2 {
+                        Text("(activities screen)")
+                    } else if vm.tab == 3 {
+                        UserProfileView()
+                    }
                 }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                
+                VStack(spacing: 0) {
+                    
+                    Spacer()
+                    
+                    BottomNavigationBarView(selectionIndex: $vm.tab)
+                    
+                }
+                
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            
-            Spacer()
-            
-            BottomNavigationBarView(selectionIndex: $vm.tab)
         }
-        .edgesIgnoringSafeArea(.bottom)
+        .edgesIgnoringSafeArea(.bottom) 
     }
 }

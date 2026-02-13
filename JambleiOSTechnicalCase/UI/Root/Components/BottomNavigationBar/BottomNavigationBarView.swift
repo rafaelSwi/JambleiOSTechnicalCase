@@ -109,7 +109,7 @@ struct BottomNavigationBarView: View {
             
         }
         .padding(.bottom, 15)
-        
+        .background(.white)
         
     }
 }

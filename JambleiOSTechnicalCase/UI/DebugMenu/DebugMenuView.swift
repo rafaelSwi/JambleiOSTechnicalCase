@@ -610,7 +610,7 @@ struct DebugMenuView: View {
                     
 
                 }
-                .padding(.bottom, 20)
+                .padding(.bottom, 40)
                 
                 
 
